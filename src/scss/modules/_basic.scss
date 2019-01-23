@@ -1,0 +1,183 @@
+body {
+    font-family: Roboto;
+    font-size: 14px;
+    color: $basicColorText;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+html,
+body {
+    height: 100%;
+}
+ul {
+    li {
+        list-style: none;
+    }
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+.container {
+    @include maxWidth;
+}
+
+a {
+    text-decoration: none;
+    color: $basicColorText;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+#gl_devel {
+    margin-left: 50px;
+    clear: both;
+    position: relative;
+    transform: translate(0);
+    color: #fff;
+  }
+  
+  #gl_devel span,
+  #gl_devel a {
+    font-family: "cuprumregular";
+    font-size: 11px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #gl_devel span {
+    color: #fff;
+  }
+  
+  #gl_devel img {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+  }
+  
+  
+  #gl_devel .mask_devel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    clip: rect(0px, 30px, 20px, 0px);
+    -webkit-animation: glyanec 5s cubic-bezier(0, -3.0, 1, 1) infinite;
+    animation: glyanec 5s cubic-bezier(0, -3.0, 1, 1) infinite;
+  }
+  
+  #gl_devel .mask_devel a,
+  #gl_devel .mask_devel {
+    color: #fff;
+  }
+  
+  #gl_devel>span>img {
+    -webkit-animation: glyanec_img 5s infinite;
+    animation: glyanec_img 5s infinite;
+  }
+  
+  @-webkit-keyframes glyanec {
+    0% {
+      clip: rect(0px, 15px, 20px, 0px);
+    }
+    100% {
+      clip: rect(0px, 200px, 20px, 200px);
+    }
+  }
+  
+  @keyframes glyanec {
+    0% {
+      clip: rect(0px, 15px, 20px, 0px);
+    }
+    100% {
+      clip: rect(0px, 200px, 20px, 200px);
+    }
+  }
+  
+  @-webkit-keyframes glyanec_img {
+    0% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+    20% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+    40% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+    60% {
+      -webkit-transform: rotate3d(0, 10, 0, 180deg);
+      transform: rotate3d(0, 10, 0, 180deg);
+    }
+    80% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+  }
+  
+  @keyframes glyanec_img {
+    0% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+    20% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+    40% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+    60% {
+      -webkit-transform: rotate3d(0, 10, 0, 180deg);
+      transform: rotate3d(0, 10, 0, 180deg);
+    }
+    80% {
+      -webkit-transform: rotate3d(10, 0, 0, 0deg);
+      transform: rotate3d(10, 0, 0, 0deg)
+    }
+  }
+  input[type=checkbox] {
+    display: none;
+    &:checked {
+      &+label {
+        &::before {
+          content: '';
+          box-shadow: 0 0 0 1px #4A90E2 inset;
+          background: url(../images/icons/check-in.svg) no-repeat center #fff;
+        }
+      }
+    }
+    &+label {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      &::before {
+        content: '';
+        box-shadow: 0 0 0 1px #cacaca inset;
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: #fff;
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        box-sizing: border-box;
+      }
+    }
+  }

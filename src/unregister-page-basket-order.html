@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Globus — Оформлення замовлення</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		//= template/blocks/header.html
+		<main class="content">
+            <div class="breadcrambs">
+                <div class="container">
+                    <ol>
+                        <li><a href="#">Головна</a></li>
+                        <li class="separate">/</li>
+                        <li>Кошик</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="basket-order-wrapper">
+                    <div class="block-title">Заповніть поля для оформлення замовлення:</div>
+                    <div class="order-form-wrapper unregister">
+                        <form>
+                            <div class="from-item">
+                                <label for="name">Ім'я:</label>
+                                <input type="text" name="name" placeholder="Іван">
+                            </div>
+                            <div class="from-item">
+                                <label for="surname">Прізвище:</label>
+                                <input type="text" name="surname" placeholder="Іванов">
+                            </div>
+                            <div class="from-item">
+                                <label for="phone">Телефон:</label>
+                                <input type="text" name="phone" placeholder="+38 (096) 000 00 00">
+                            </div>
+                            <div class="from-item">
+                                <label for="email">Електронна адреса:</label>
+                                <input type="text" name="email" placeholder="office@gmail.com">
+                            </div>
+                            <div class="from-item">
+                                <label for="address">Адреса:</label>
+                                <select name="address" id="address">
+                                    <option selected value="Львів">Львів</option>
+                                    <option value="Київ">Київ</option>
+                                    <option value="Вінниця">Вінниця</option>
+                                </select>
+                            </div>
+                            <div class="from-item for-address">
+                                    <input class="street" type="text"  placeholder="Вулиця">
+                                    <input class="house" type="text"  placeholder="буд.">
+                                    <input class="room"type="text"  placeholder="кв.">
+                                </div>
+                            <div class="from-item">
+                                <label for="delivery">Доставка:</label>
+                                <select name="delivery" id="delivery">
+                                    <option selected value="Нова пошта">Нова пошта</option>
+                                    <option value="Інтайм">Інтайм</option>
+                                    <option value="Укрпошта">Укрпошта</option>
+                                </select>
+                            </div>
+                            <div class="from-item">
+                                <label for="payment">Оплата:</label>
+                                <select name="payment" id="payment">
+                                    <option selected value="Гтоівкою">Гтоівкою</option>
+                                    <option value="Банківський переказ">Банківський переказ</option>
+                                    <option value="Картокю">Картокю</option>
+                                </select>
+                            </div>
+                            <div class="from-item">
+                                <label for="descr">Примітка:</label>
+                               <textarea name="descr"></textarea>
+                            </div>
+                            <div class="from-action">
+                                <input type="submit" value="Замовити">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="back-link">
+                        <a onclick="history.back(); return false;">Повернутись назад</a>
+                    </div>
+                </div>
+            </div>
+		</main>
+		//= template/blocks/footer.html
+	</div>
+	<script src='js/main.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+.footer {
+    .container {
+        display: flex;
+    }
+}
+.footer-content {
+    background: linear-gradient(180deg, #FFFFFF -23.22%, rgba(224, 233, 255, 0.8) 100%);
+    .logo {
+        padding-top: 20px;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            span {
+                font-size: 28px;
+                font-weight: 500;
+                color: #2A3671;
+            }
+        }
+    }
+    .footer-menu {
+        padding: 25px 0 27px 105px;
+        ul {
+            column-count: 3;
+            // margin-right: -80px;
+            li {
+                position: relative;
+                padding-left: 10px;
+                margin-bottom: 10px;
+                margin-right: 30px;
+                &::before {
+                    content: '';
+                    width: 3px;
+                    height: 3px;
+                    background: $basicColorText;
+                    position: absolute;
+                    left: 0;
+                    top: 6px;
+                    border-radius: 50%;
+                }
+                a {
+                    font-size: 12px;
+                    &:hover,
+                    &.active {
+                        color: $maineColor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .footer-link-wrapper {
+        padding: 25px 0 0 0;
+        margin-left: auto;
+        .login-sellers {
+            a {
+                display: block;
+                font-weight: 500;
+                font-size: 12px;
+                text-decoration: underline;
+                color: $maineColor;
+                line-height: 15px;
+                padding-left: 20px;
+                background: url(./images/icons/use-ico.svg) no-repeat left center;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .social-links {
+            padding-top: 10px;
+            display: flex;
+            .item {
+                margin-right: 10px;
+                position: relative;
+                transition: 0.3s;
+                &:hover {
+                    top: -2px;
+                }
+            }
+        }
+    }
+}
+.footer-bottom {
+    background: rgba(14, 28, 97, 0.8);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+    .copyright {
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+}
