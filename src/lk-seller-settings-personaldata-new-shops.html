@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Globus — Личный кабинет продавца</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		//= template/blocks/header-lk-seller.html
+		<main class="content">
+            <div class="breadcrambs">
+                <div class="container">
+                    <ol>
+                        <li><a href="#">Личный кабинет продавца</a></li>
+                        <li class="separate">/</li>
+                        <li>Настройки</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="seller-area-wrapper settings-personaldata">
+                    <ul class="settings-personaldata-menu">
+                        <li><a href="#">Личные данные </a></li>
+                        <li class="active"><a href="#">Магазины</a></li>
+                    </ul>
+                    <div class="settings-personaldata-form-wrapper">
+                        <form class="shop-setting new-shop">
+                            <div class="form-item">
+                                <label>Название:</label>
+                                <input type="text" placeholder="Маркет ОПТ">
+                            </div>
+                            <div class="form-item">
+                                <label>Логотип:</label>
+                                <div class="logo-wrapper">
+                                    <div class="image"><img src="./images/img/no-image-lk.png" alt="" width="138" height="81"></div>
+                                    <button class="add-file">Выберите файл</button>
+                                    <div class="descr">Вы можете добавить логотип размером до 8 Мб с расширением *.jpg, *.gif, *.png или *.bmp</div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <label>Описание:</label>
+                               <textarea placeholder="Текст"></textarea>
+                            </div>
+                            <div class="form-item">
+                                <label>Телефон:</label>
+                               <input type="text" placeholder="+38 (096) 456 21 21">
+                            </div>
+                            <div class="form-item">
+                                    <label>Email:</label>
+                                   <input type="text" placeholder="new_user@gmail.com">
+                                </div>
+                            <div class="form-item">
+                                <label>Адрес:</label>
+                               <select >
+                                   <option value="Львов">Львов</option>
+                                   <option value="Киев">Киев</option>
+                                   <option value="Харьков">Харьков</option>
+                               </select>
+                            </div>
+                            <div class="form-item for-address">
+                                <input class="street" type="text" placeholder="Улица">
+                                <input class="house" type="text" placeholder="дом">
+                                <input class="room" type="text" placeholder="кв.">
+                            </div>
+
+                            <div class="form-action">
+                                <input type="submit" value="Сохранить">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+		</main>
+		//= template/blocks/footer.html
+	</div>
+	<script src='js/main.js'></script>
+</body>
+
+</html>

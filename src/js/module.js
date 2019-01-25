@@ -72,18 +72,41 @@ $(document).ready(function () {
     $(".amount-min").val($("#slider-range").slider("values", 0));
     $(".amount-max").val($("#slider-range").slider("values", 1));
   });
-  $('.tabs-wrapper .tabs-title .tab-title').click('click', function() {
+  $('.tabs-wrapper .tabs-title .tab-title').click(function() {
     var id = $(this).attr('data-label');
     $('.tabs-wrapper .tabs-title .tab-title').removeClass('active');
     $(this).addClass('active');
     $('.tabs-wrapper .tabs-content .tab').removeClass('active');
     $('.tabs-wrapper .tabs-content .tab[data-label='+id+']').addClass('active');
   });
-  $('.login-block .tabs-title li').click('click', function() {
+  $('.login-block .tabs-title li').click(function() {
     var id = $(this).attr('data-label');
     $('.login-block .tabs-title li').removeClass('active');
     $(this).addClass('active');
     $('.login-block .tabs-content .tab').removeClass('active');
     $('.login-block .tabs-content .tab[data-label='+id+']').addClass('active');
+  });
+  $('.delivery-page .tabs-title li').click(function() {
+    var id = $(this).attr('data-label');
+    $('.delivery-page .tabs-title li').removeClass('active');
+    $(this).addClass('active');
+    $('.delivery-page .tabs-content .tab').removeClass('active');
+    $('.delivery-page .tabs-content .tab[data-label='+id+']').addClass('active');
+  });
+  $('.row-title').click(function () {
+    $(this).parent().toggleClass('active');
+    $(this).parent().find('.row-description').slideToggle(500);
+  });
+  $('.lk-table tbody .line-info-top').click(function() {
+    $(this).toggleClass('active');
+    $(this).next('.line-info').slideToggle(500);
+  });
+  $('.delivery-page .btn-track-delivery').click(function() {
+    $('.delivery-page .popup').fadeIn(500);
+    $('.delivery-page .track-delivery-wrapper').fadeIn(500);
+  });
+  $('.delivery-page .track-delivery-wrapper .close, .delivery-page .popup').click(function() {
+    $('.delivery-page .popup').fadeOut(500);
+    $('.delivery-page .track-delivery-wrapper').fadeOut(500);
   });
 });

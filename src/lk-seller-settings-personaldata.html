@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Globus — Личный кабинет продавца</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		//= template/blocks/header-lk-seller.html
+		<main class="content">
+            <div class="breadcrambs">
+                <div class="container">
+                    <ol>
+                        <li><a href="#">Личный кабинет продавца</a></li>
+                        <li class="separate">/</li>
+                        <li>Настройки</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container">
+                <div class="seller-area-wrapper settings-personaldata">
+                    <ul class="settings-personaldata-menu">
+                        <li class="active"><a href="#">Личные данные </a></li>
+                        <li><a href="#">Магазины</a></li>
+                    </ul>
+                    <div class="settings-personaldata-form-wrapper">
+                        <form>
+                            <div class="form-item">
+                                <label>ФИО:</label>
+                                <input type="text" placeholder="Панов Олег Аркадьевич">
+                            </div>
+                            <div class="form-item">
+                                <label>Статус:</label>
+                                <select>
+                                    <option value="ФОП">ФОП</option>
+                                    <option value="ЧП">ЧП</option>
+                                    <option value="ОАО">ОАО</option>
+                                </select>
+                            </div>
+                            <div class="form-item">
+                                <label>Телефон:</label>
+                               <input type="text" placeholder="+38 (096) 456 21 21">
+                            </div>
+                            <div class="form-item">
+                                <label>Адрес:</label>
+                               <input type="text" placeholder="г. Киев, ул. Пускина, 34">
+                            </div>
+                            <div class="form-item">
+                                <label>Электронный адрес:</label>
+                               <input type="text" placeholder="new_user@gmail.com">
+                            </div>
+                            <div class="form-item">
+                                <label>Профиль в соц. сетях:</label>
+                               <input type="text" placeholder="gurev_igor">
+                            </div>
+                            <div class="form-item">
+                                <label>Интернет-магазин:</label>
+                               <input type="text" placeholder="globus.net/gurev_igor">
+                            </div>
+                            <div class="form-action">
+                                <input class="del-btn" type="submit" value="Удалить профиль">
+                                <input class="save-btn" type="submit" value="Сохранить изменения">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+		</main>
+		//= template/blocks/footer.html
+	</div>
+	<script src='js/main.js'></script>
+</body>
+
+</html>
